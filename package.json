@@ -1,0 +1,24 @@
+{
+  "name": "react-native-text-transition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqwq3/react-native-text-transition.git"
+  },
+  "keywords": [
+    "js",
+    "react",
+    "react-native"
+  ],
+  "author": "18883141270@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qqwq3/react-native-text-transition/issues"
+  },
+  "homepage": "https://github.com/qqwq3/react-native-text-transition#readme"
+}
