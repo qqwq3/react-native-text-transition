@@ -57,7 +57,7 @@ const styles = ScaledSheet.create({
     },
 });
 
-class TextFold extends Component<Props, State>{
+class TextTransition extends Component<Props, State>{
     static defaultProps = {
         text: '',
         tension: 0,
@@ -151,4 +151,4 @@ class TextFold extends Component<Props, State>{
     }
 }
 
-export default TextFold;
+export default TextTransition;
