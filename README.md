@@ -89,7 +89,7 @@ render() {
     return (
         <View style={styles.container}>      
             <TextTransition
-                text={'这里是文本内容'}
+                text={'Here is the text content'}
             />
         </View>
     );
