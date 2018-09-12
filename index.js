@@ -1,8 +1,7 @@
 
-// 本组件做了样式适配
-
 import React,{ Component } from 'react';
 import { View, Animated, TouchableWithoutFeedback, Text, Image } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import { Styles, ScaledSheet, Fonts, BackgroundColor, Colors, Img } from "./Style";
 
 type Props = {
@@ -20,7 +19,8 @@ type Props = {
     textStyle?: Array<any> | Object<any>,
     arrowViewStyle?: Array<any> | Object<any>,
     arrowImageStyle?: Array<any> | Object<any>,
-    animatedViewStyle?: Object<any>
+    animatedViewStyle?: Object<any>,
+    colorArr: ?Array<any>,
 };
 
 type State = {
@@ -69,11 +69,12 @@ class TextTransition extends Component<Props, State>{
         contentBackgroundColor: '#FFFFFF',
         iconUp: icons.up,
         iconDown: icons.down,
-        iconColor: '#cccccc',
+        iconColor: '#f3916b',
         textStyle: [styles.description, Fonts.fontSize12, Colors.gray_808080],
         arrowViewStyle: [styles.arrow, Styles.marginHorizontal15],
         arrowImageStyle: [Img.resizeModeContain, styles.arrowIcon],
         animatedViewStyle: Styles.paddingHorizontal15,
+        colorArr: ['rgba(255,255,255,0.55)', 'rgba(255,255,255,1.0)'],
     };
     state = {
         expanded: true,
@@ -135,15 +136,28 @@ class TextTransition extends Component<Props, State>{
                             </Text>
                         </Text>
                     </Animated.View>
+                    {/*{*/}
+                        {/*isShow ?*/}
+                        {/*<View style={this.props.arrowViewStyle}>*/}
+                            {/*<Image*/}
+                                {/*source={icon}*/}
+                                {/*style={this.props.arrowImageStyle}*/}
+                                {/*tintColor={this.props.iconColor}*/}
+                            {/*/>*/}
+                        {/*</View> : null*/}
+                    {/*}*/}
                     {
                         isShow ?
-                        <View style={this.props.arrowViewStyle}>
+                        <LinearGradient
+                            colors={this.props.colorArr}
+                            style={this.props.arrowViewStyle}
+                        >
                             <Image
                                 source={icon}
                                 style={this.props.arrowImageStyle}
                                 tintColor={this.props.iconColor}
                             />
-                        </View> : null
+                        </LinearGradient> : null
                     }
                 </View>
             </TouchableWithoutFeedback>

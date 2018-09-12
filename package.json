@@ -1,6 +1,6 @@
 {
   "name": "react-native-text-transition",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/qqwq3/react-native-text-transition#readme",
   "dependencies": {
-    "react-native-size-matters": "^0.1.3"
+    "react-native-size-matters": "^0.1.3",
+    "react-native-linear-gradient": "^2.4.0"
   },
   "devDependencies": {}
 }
