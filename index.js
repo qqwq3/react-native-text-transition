@@ -20,7 +20,7 @@ type Props = {
     arrowViewStyle?: Array<any> | Object<any>,
     arrowImageStyle?: Array<any> | Object<any>,
     animatedViewStyle?: Object<any>,
-    colorArr: ?Array<any>,
+    colorArr: ?Array<any>
 };
 
 type State = {
@@ -136,16 +136,6 @@ class TextTransition extends Component<Props, State>{
                             </Text>
                         </Text>
                     </Animated.View>
-                    {/*{*/}
-                        {/*isShow ?*/}
-                        {/*<View style={this.props.arrowViewStyle}>*/}
-                            {/*<Image*/}
-                                {/*source={icon}*/}
-                                {/*style={this.props.arrowImageStyle}*/}
-                                {/*tintColor={this.props.iconColor}*/}
-                            {/*/>*/}
-                        {/*</View> : null*/}
-                    {/*}*/}
                     {
                         isShow ?
                         <LinearGradient
